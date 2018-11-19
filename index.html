@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>color-picker</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="black-content"></div>
+  <div class="color-pick">
+    <div class="color-pick-wrap">
+      <div class="color-board" id="color_board">
+        <div class="color-point" id="color_point">
+          <div class="shape"></div>
+        </div>
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+      </div>
+      <div class="color-bar" id="color_bar">
+        <div class="color-rect">
+          <div class="shape"></div>
+        </div>
+        <div class="bg"></div>
+      </div>
+      <div class="color-result" id="color_result">
+        <span>确定</span>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/colorPicker.js"></script>
+  <script>
+    $(document).ready(function () {
+      colorPickerInit();
+
+      $("#color_result").click(function() { 
+        alert($(this).css("background-color"));
+      });
+    });
+  </script>
+</body>
+</html>
